@@ -28,7 +28,7 @@ app.locals.playlist = [
   },
   {
     songName: 'Django',
-    artistName: 'The Modern JAzz Quartet',
+    artistName: 'The Modern Jazz Quartet',
     link: 'https://www.youtube.com/watch?v=wXnkD7_5vqM',
     id: 4
   },
@@ -48,6 +48,20 @@ app.post(`${baseUrl}/playlist`, (req, res) => {
   const newSong = { songName, artistName, link, id: Date.now() };
   app.locals.playlist.push(newSong);
   res.status(201).json(newSong);
+});
+
+app.delete(`${baseUrl}/playlist/:songId`, (req, res) => {
+  const {songId} = req.params;
+  if (!songId) {
+    return res.status(422).json({errorMessage: 'No song id included in request'});
+  };
+  const shortenedPlaylist = app.locals.playlist.filter( song => song.id !== +songId );
+  if ( shortenedPlaylist.length === app.locals.playlist.length ) {
+    return res.status(404).json({errorMessage: `Cannot DELETE: no song with an id of ${songId} found`});
+  }
+  
+  app.locals.playlist = shortenedPlaylist;
+  res.sendStatus(204);
 });
 
 app.listen(port, () => {
