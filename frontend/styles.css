@@ -1,0 +1,71 @@
+body {
+  background-color: #D3D3D3;
+}
+
+/* Styling for the form container */
+form {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for the form inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  padding: 20px;
+}
+
+/* Style for the form button */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Add hover effect for the button */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for card container */
+#playlist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style for individual card */
+.card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin: 10px;
+  padding: 20px;
+  text-align: left;
+  width: 20%;
+}
+
+/* Style for card headings */
+.card h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+/* Style for card paragraphs */
+.card p {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
