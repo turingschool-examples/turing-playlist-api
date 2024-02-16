@@ -6,7 +6,7 @@
 1. Run`npm install` to install dependencies
 1. Run `npm start` to run the server locally
 1. In a new tab in your terminal (`command + T`), use `open frontend/index.html` to run the frontend.
-2. Navigate to `frontend/index.js` in VS Code and begin working through the challenges.
+2. Navigate to `frontend/main.js` in VS Code and begin working through the challenges.
 
 ## Routes
 The server should be running locally at `http://localhost:8080`.
