@@ -1,10 +1,11 @@
 # Turing Playlist - Music Management API 
 
 ## Set Up
-1. Clone down this repo
-1. `cd` into the repo 
-1. Run`npm install` to install dependencies
-1. Run `npm start` to run the server locally
+1. Clone down this repo.
+1. `cd` into the repo.
+1. Run`npm install` to install dependencies.
+1. Run `npm start` to run the server locally.
+2. Navigate to `http://localhost:8080/api/v1/playlist` in your browser and you should see the data from the server. (Hint: As you POST and DELETE, you can refresh this page to see the updates!)
 1. In a new tab in your terminal (`command + T`), use `open frontend/index.html` to run the frontend.
 2. Navigate to `frontend/main.js` in VS Code and begin working through the challenges.
 
