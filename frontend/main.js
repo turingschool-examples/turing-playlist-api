@@ -50,6 +50,6 @@ addSongButton.addEventListener('click', function(event) {
 
 // Extensions 
 
-// 3. Add a delete button to each card and use the endpoint to remove the song from the playlist
+// 3. Add error handling so that if the form is incomplete, the POST is not sent and the user gets a helpful error message
 
-// 4. Add error handling so that if the form is incomplete, the POST is not sent and the user gets a helpful error message
+// 4. Add a delete button to each card and use the endpoint to remove the song from the playlist
