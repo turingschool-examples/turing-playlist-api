@@ -36,11 +36,11 @@ app.get(`${baseUrl}/playlist`, (req, res) => {
 
 app.post(`${baseUrl}/playlist`, (req, res) => {
   const { songName, artistName } = req.body;
-  // for (let prop of [songName, artistName]) {
-  //   if (!prop) {
-  //     return res.status(422).json({errorMesage: `Cannot POST: missing property ${prop} on request`});
-  //   }
-  // }
+  for (let prop of [songName, artistName]) {
+    if (!prop) {
+      return res.status(422).json({errorMesage: `Cannot POST: missing property ${prop} on request`});
+    }
+  }
   const newSong = { songName, artistName, id: Date.now() };
   app.locals.playlist.push(newSong);
   res.status(201).json(newSong);
